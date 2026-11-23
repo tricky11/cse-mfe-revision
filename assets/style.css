@@ -1,0 +1,28 @@
+:root{--bg:#fbfbf9;--fg:#1d2127;--mut:#5b6470;--acc:#1f5fae;--line:#dfe3e8;--box:#eef3fa;--prim:#f4f8ee;--primb:#b9d08a}
+@media (prefers-color-scheme:dark){:root{--bg:#16181c;--fg:#e6e8eb;--mut:#9aa3ad;--acc:#7db2f0;--line:#2c3138;--box:#1d2430;--prim:#1d261a;--primb:#4c6a2c}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Georgia,"Iowan Old Style",serif}
+.top{position:fixed;top:0;left:0;right:0;height:52px;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:0 14px;z-index:30;font-family:system-ui,sans-serif}
+.brand{font-weight:700;color:var(--fg);text-decoration:none;white-space:nowrap}.pg{color:var(--mut);font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#burger{width:40px;height:40px;border:1px solid var(--line);border-radius:8px;background:transparent;display:flex;flex-direction:column;justify-content:center;gap:5px;padding:0 9px;cursor:pointer}
+#burger span{display:block;height:2px;background:var(--fg);border-radius:2px}
+#nav{position:fixed;top:52px;bottom:0;left:0;width:min(360px,88vw);background:var(--bg);border-right:1px solid var(--line);overflow:auto;padding:12px 14px 40px;transform:translateX(-102%);transition:transform .18s;z-index:25;font:14.5px/1.4 system-ui,sans-serif}
+body.navopen #nav{transform:none}
+#scrim{display:none;position:fixed;inset:52px 0 0 0;background:rgba(0,0,0,.35);z-index:20}body.navopen #scrim{display:block}
+.nav-title{font-weight:700;margin-bottom:8px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;font-size:12px}
+#nav details{margin:2px 0}#nav summary{cursor:pointer;padding:6px 4px;font-weight:600}#nav summary a{color:var(--fg);text-decoration:none}
+#nav ul{list-style:none;margin:0 0 6px;padding:0 0 0 10px;border-left:2px solid var(--line)}#nav li a{display:block;padding:3px 8px;color:var(--acc);text-decoration:none;border-radius:4px}#nav li a:hover{background:var(--box)}
+#nav li.l3{padding-left:14px;font-size:13.5px}
+main{max-width:860px;margin:0 auto;padding:78px 20px 80px}
+h1{font-size:1.9rem;line-height:1.25;margin:2.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em;font-family:system-ui,sans-serif}
+h2{font-size:1.45rem;margin:2em 0 .5em;font-family:system-ui,sans-serif}h3{font-size:1.12rem;margin:1.6em 0 .4em;font-family:system-ui,sans-serif}
+main>h1:first-child{margin-top:0}
+p{margin:.7em 0}a{color:var(--acc)}
+.tablewrap{overflow-x:auto;margin:1em 0}table{border-collapse:collapse;font:14.5px/1.45 system-ui,sans-serif;min-width:100%}th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}th{background:var(--box)}
+.katex{font-size:1.06em}
+.primer{background:var(--prim);border:1px solid var(--primb);border-left:5px solid var(--primb);border-radius:8px;padding:6px 18px 10px;margin:1em 0 1.4em;font-size:16.5px}
+.primer-title{font:700 12px system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-top:8px}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:3em;padding-top:1em;border-top:1px solid var(--line);font:15px system-ui,sans-serif}
+code{font-size:.92em;background:var(--box);padding:1px 4px;border-radius:4px}
+ul,ol{padding-left:1.4em}li{margin:.25em 0}
+@media print{.top,#nav,#scrim,.pager{display:none}main{padding-top:0;max-width:none}}
